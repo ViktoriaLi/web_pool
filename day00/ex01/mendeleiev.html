@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en-US" style="background-color:#FFEBCD">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <title>Mendeleev's Periodic Table</title>
+    <style>
+      div.elements {
+        display: inline-block;
+        width: 5.4%;
+
+        height: auto;
+        border: 1px solid black;
+        float: left;
+        text-align: center;
+        vertical-align: middle;
+        font-size:3vw;
+        box-sizing: border-box;
+      }
+
+      div.line {
+        display: inline-block;
+        width: 5.4%;
+        height: 20px;
+        float: left;
+      }
+
+      #nometals {
+        background-color: #9370DB;
+      }
+
+      #halogens {
+        background-color: #FF69B4;
+      }
+
+      #noble_gases {
+        background-color: #00FFFF;
+      }
+
+      #unknown {
+        background-color: #778899;
+      }
+
+      #metalloids {
+        background-color: #3CB371;
+      }
+
+      #actinoids {
+        background-color: #008080;
+      }
+
+      #lanthanoids {
+        background-color: #20B2AA;
+      }
+
+      #transition_metals {
+        background-color: #7FFF00;
+      }
+
+      #alkali_metals {
+        background-color: #FFFACD;
+      }
+
+      #alkaline_metals {
+        background-color: #FFA500;
+      }
+
+      #other_metals {
+        background-color: #FF6347;
+      }
+
+      #empty {
+        border-color: #FFEBCD;
+      }
+
+      p.number {
+         text-align: left;
+         font-size:1vw;
+         margin-bottom: 5px;
+         margin-left: 1px;
+         padding: 5px;
+         margin: 5px;
+      }
+
+      p.weight {
+         text-align: right;
+         font-size:1vw;
+         margin-top: 5px;
+         margin-right: 1px;
+         margin-left: 5px;
+         padding: 2px;
+         margin: 2px;
+      }
+
+      #wrapper {
+        margin-left:auto;
+        margin-right:auto;
+        weight:1040px;
+        padding: 25px;
+        margin: 25px;
+        overflow: hidden;
+      }
+
+      #head {
+        margin-left:auto;
+        margin-right:auto;
+        height:300px;
+      }
+
+      p.name {
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 2px;
+        margin: 2px;
+      }
+
+    </style>
+  </head>
+  <body>
+
+    <header id="head" style="background-color:#FFEBCD">
+      <div>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSpcYh2j2l9m2s2YwdAsHBsFuRRq6NnzUUUZwqABwFroc896qQwpw" align="right" alt="Mendeleev">
+        <h1 style="text-align:center;font-size:8vw;">Mendeleev's Periodic<br>Table</h1>
+      </div>
+    </header>
+
+    <main id="wrapper" style="background-color:#FFEBCD">
+      <div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="noble_gases">
+        <p class="weight"><small>4.002602</p>
+        <p class="name"><bold>He</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>6.941</p>
+        <p class="name"><bold>Li</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>9.012182</p>
+        <p class="name"><bold>Be</p>
+        <p class="number"><small>4</p>
+        </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>10.811</p>
+        <p class="name"><bold>B</p>
+        <p class="number"><small>5</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>12.0107</p>
+        <p class="name"><bold>C</p>
+        <p class="number"><small>6</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>14.0067</p>
+        <p class="name"><bold>N</p>
+        <p class="number"><small>7</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>15.9994</p>
+        <p class="name"><bold>O</p>
+        <p class="number"><small>8</p>
+        </div>
+        <div class="elements" id="halogens">
+        <p class="weight"><small>18.998403</p>
+        <p class="name"><bold>F</p>
+        <p class="number"><small>9</p>
+        </div>
+        <div class="elements" id="noble_gases">
+        <p class="weight"><small>20.1797</p>
+        <p class="name"><bold>Ne</p>
+        <p class="number"><small>10</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="empty">      </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="halogens">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="noble_gases">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="nometals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="halogens">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="noble_gases">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="halogens">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="noble_gases">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="other_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="halogens">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="metalloids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="alkali_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="alkaline_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="transition_metals">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="unknown">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="line" id="empty">      </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="lanthanoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="empty">        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>1</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>2</p>
+        </div>
+        <div class="elements" id="actinoids">
+        <p class="weight"><small>1.00794</p>
+        <p class="name"><bold>H</p>
+        <p class="number"><small>3</p>
+        </div>
+      </div>
+    </main>
+
+    <footer style="height:200px">
+    </footer>
+
+  </body>
+
+</html>
