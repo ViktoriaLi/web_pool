@@ -1,0 +1,58 @@
+* { box-sizing: border-box; }
+
+html {
+    background-image: url("https://99px.ru/sstorage/53/2012/03/tmb_38472_2589.jpg");
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+header {
+    text-align: center;
+}
+
+main {
+    padding-top: 20px;
+    text-align: center;
+}
+
+.item {
+    position: relative;
+    display: inline-block;
+}
+
+.main {
+    background-color: #DC143C;
+    color: white;
+    padding: 16px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.sub_items {
+    display: none;
+    position: fixed;
+    background-color: #f9f9f9;
+    z-index: 1;
+}
+
+a {
+    color: black;
+    padding: 16px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+a:hover {
+    background-color: #FAEBD7;
+}
+
+.item:hover .sub_items {
+    display: block;
+}
+
+.sncf {
+    margin-top: 20px;
+}
