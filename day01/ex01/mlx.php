@@ -1,3 +1,4 @@
+#!/usr/bin/php
 <?php
 	$symb = 'X';
 	$remainder = 0;
