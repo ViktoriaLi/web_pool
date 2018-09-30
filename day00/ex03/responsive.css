@@ -1,0 +1,126 @@
+div.elements {
+  display: inline-block;
+  width: 5.4%;
+  height: auto;
+  border: 1px solid black;
+  float: left;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 1.5vw;
+  box-sizing: border-box;
+}
+
+div.line {
+  display: inline-block;
+  width: 5.4%;
+  height: 20px;
+  float: left;
+}
+
+html {
+  height: 100%;
+}
+
+main {
+
+   min-height: 700px;
+}
+
+header {
+
+   min-height: 150px;
+}
+
+footer {
+
+   min-height: 150px;
+}
+#nometals {
+  background-color: #9370DB;
+}
+
+#halogens {
+  background-color: #FF69B4;
+  }
+
+  #noble_gases {
+  background-color: #00FFFF;
+}
+
+#unknown {
+  background-color: #778899;
+  }
+
+  #metalloids {
+  background-color: #3CB371;
+  }
+
+  #actinoids {
+  background-color: #008080;
+  }
+
+  #lanthanoids {
+  background-color: #20B2AA;
+  }
+
+  #transition_metals {
+  background-color: #7FFF00;
+  }
+
+  #alkali_metals {
+  background-color: #FFFACD;
+  }
+
+  #alkaline_metals {
+  background-color: #FFA500;
+  }
+
+  #other_metals {
+  background-color: #FF6347;
+  }
+
+  #empty {
+  border-color: #FFEBCD;
+}
+
+p.number {
+  text-align: left;
+  font-size:1vw;
+  margin-bottom: 1px;
+  margin-left: 1px;
+  padding: 1px;
+  margin: 1px;
+}
+
+p.weight {
+  text-align: right;
+  font-size:1vw;
+  margin-top: 1px;
+  margin-right: 1px;
+  margin-left: 1px;
+  padding: 1px;
+  margin: 1px;
+}
+
+#wrapper {
+  margin-left:auto;
+  margin-right:auto;
+  margin-right:auto;
+  weight: 720px;
+  padding: 50px;
+  margin: 50px;
+  overflow: hidden;
+}
+
+#head {
+  margin-left:auto;
+  margin-right:auto;
+  height: 150px;
+}
+
+p.name {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  padding: 1px;
+  margin: 1px;
+}
