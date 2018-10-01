@@ -26,7 +26,7 @@
 			echo "Syntax Error\n";
 			return 0;
 		}
-		if (strrchr($str, '+') != strstr($str, '+') || strrchr($str, '-') != strstr($str, '-') || 
+		if (strrchr($str, '+') != strstr($str, '+') || 
 			strrchr($str, '*') != strstr($str, '*') || strrchr($str, '/') != strstr($str, '/') || 
 			strrchr($str, '%') != strstr($str, '%'))
 		{
@@ -54,18 +54,16 @@
 		}
 		if (strrchr($str, '*'))
 		{
-			$first = substr($str, 0, strrchr($str, '*'));
-			$first = trim($first);
+			$first = substr($str, 0, strrchr($str, '*')[1]);
+			$first = trim($first)-0;
 			$second = substr($str, strrchr($str, '*') + 1);
-			$second = trim($second);
-			echo "$first\n";
-			echo "$second\n";
+			$second = trim($second)-0;
 			echo $first * $second;
 			echo "\n";
 		}
 		if (strrchr($str, '/'))
 		{
-			$first = substr($str, 0, strrchr($str, '/'));
+			$first = substr($str, 0, strrchr($str, '/')[1]);
 			$first = trim($first);
 			$second = substr($str, strrchr($str, '/') + 1);
 			$second = trim($second);
@@ -74,7 +72,7 @@
 		}
 		if (strrchr($str, '%'))
 		{
-			$first = substr($str, 0, strrchr($str, '%'));
+			$first = substr($str, 0, strrchr($str, '%')[1]);
 			$first = trim($first);
 			$second = substr($str, strrchr($str, '%') + 1);
 			$second = trim($second);
