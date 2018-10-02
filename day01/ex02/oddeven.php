@@ -7,10 +7,15 @@
 	{
 		
 		if ($number == "\n")
+		{
 			echo "'' is not a number\n";
+			echo "Enter a number: ";
+			$number = fgets(STDIN);
+			continue ;
+		}
 		if ($number === "0\n")
 		{
-			echo "The number '0' is even\n";
+			echo "The number 0 is even\n";
 			echo "Enter a number: ";
 			$number = fgets(STDIN);
 			continue ;

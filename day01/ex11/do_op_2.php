@@ -54,27 +54,27 @@
 		}
 		if (strrchr($str, '*'))
 		{
-			$first = substr($str, 0, strrchr($str, '*')[1]);
-			$first = trim($first)-0;
-			$second = substr($str, strrchr($str, '*') + 1);
-			$second = trim($second)-0;
+			$first = substr($str, 0, strpos($str, '*') + 1);
+			$first = trim($first);
+			$second = substr($str, strpos($str, '*') + 1);
+			$second = trim($second) - 0;
 			echo $first * $second;
 			echo "\n";
 		}
 		if (strrchr($str, '/'))
 		{
-			$first = substr($str, 0, strrchr($str, '/')[1]);
+			$first = substr($str, 0, strpos($str, '/') + 1);
 			$first = trim($first);
-			$second = substr($str, strrchr($str, '/') + 1);
+			$second = substr($str, strpos($str, '/') + 1);
 			$second = trim($second);
 			echo $first / $second;
 			echo "\n";
 		}
 		if (strrchr($str, '%'))
 		{
-			$first = substr($str, 0, strrchr($str, '%')[1]);
+			$first = substr($str, 0, strpos($str, '%') + 1);
 			$first = trim($first);
-			$second = substr($str, strrchr($str, '%') + 1);
+			$second = substr($str, strpos($str, '%') + 1);
 			$second = trim($second);
 			echo $first % $second;
 			echo "\n";

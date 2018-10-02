@@ -3,7 +3,7 @@
 	if ($argc > 1)
 	{
 		$str = trim($argv[1]);
-		$str = str_word_count($str, 1, "!@#$%^*()-_=+\|'?/.,%6012345789:;<>");
+		$str = str_word_count($str, 1, "!@#$%^*()-_=+\|'?/.,%60±§12345789:;<>");
 		$i = 0;
 		$len = count($str);
 		foreach ($str as $print) {

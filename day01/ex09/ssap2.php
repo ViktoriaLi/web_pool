@@ -1,5 +1,35 @@
 #!/usr/bin/php
 <?php
+	function my_cmp($str1, $str2)
+	{
+		$a_low = strtolower($str1);
+		$b_low = strtolower($str2);
+		$i = 0;
+		while (($i < strlen($str1)) && ($i < strlen($str2)))
+		{
+			if ($a_low[$i] != $b_low[$i])
+			{
+				if ($a_low[$i] >= 'a' && $a_low[$i] <= 'z')
+					return (-1);
+				if ($a_low[$i] >= '0' && $a_low[$i] <= '9' && $b_low[$i] >= 'a' && $b_low[$i] <= 'z')
+					return (1);
+				else if ($a_low[$i] >= '0' && $a_low[$i] <= '9')
+					return (-1);
+				else if (($a_low[$i] < '0' || ($a_low[$i] > '9' && $a_low[$i] < 'A') || ($a_low[$i] > 'Z' && $a_low[$i] < 'a') || $a_low[$i] > 'z') &&
+					($b_low[$i] < '0' || ($b_low[$i] > '9' && $b_low[$i] < 'A') || ($b_low[$i] > 'Z' && $b_low[$i] < 'a') || $b_low[$i] > 'z'))
+				{
+					if (ord($a_low[$i]) < ord($b_low[$i]))
+						return (-1);
+					else
+						return (1);
+				}
+				else
+					return (1);
+			}
+			$i++;
+		}
+	}
+
 	if ($argc > 1)
 	{
 		for($i = 1; $i < $argc; $i++)
@@ -33,6 +63,8 @@
 					array_push($all_arr, $str);
 					unset( $all_arr[array_search($str, $all_arr)] );}
 		}
+		usort($all_arr, "my_cmp");
+
 		foreach ($all_arr as $print) {
 			echo "$print\n";
 		}
