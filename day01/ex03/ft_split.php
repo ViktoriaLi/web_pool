@@ -6,7 +6,7 @@
 			return NULL;
 		$arr = str_word_count($to_spl, 1);
 		natsort($arr);
-		$new_arr;
+		$new_arr = NULL;
 		$i = 0;
 		foreach ($arr as $str) {
 			$new_arr[$i++] = $str;

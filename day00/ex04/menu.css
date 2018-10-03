@@ -18,6 +18,13 @@ main {
     text-align: center;
 }
 
+.sandwich {
+    width: 35px;
+    height: 5px;
+    background-color: #DC143C;
+    margin: 6px 0;
+}
+
 .item {
     position: relative;
     display: inline-block;
