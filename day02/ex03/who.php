@@ -1,24 +1,18 @@
 #!/usr/bin/php
 <?php
-
-	/*$str = "";
-	$file = fopen("/var/log/wtmp",'r');
-	$new = fread($file, 100);
-	$str .= $new;
-	while ($new == TRUE)
-	{
-		$new = fread($file, 100);
-		$str .= $new;
-	}
-	fclose($file);
-	$tmp = $str;
-	$data = unpack("a256a/a4b/a32c/id/ie/I2f/a256g/i16h", $str);
-	echo "\n";*/
-    $file = fopen("/var/run/utmp", "r");
+    date_default_timezone_set('Europe/Kiev');
+    $file = fopen("/var/run/utmpx", "r");
     while ($utmpx = fread($file, 628)){
-        $unpack = unpack("cchars/nint", $utmpx);
+        $unpack = unpack("a256a/a4b/a32c/id/ie/I2f/a256g/i16h", $utmpx);
         $array[$unpack['c']] = $unpack;
     }
     ksort($array);
-
-?>
+    foreach ($array as $v){
+        if ($v['e'] == 7) {
+            echo str_pad(substr(trim($v['a']), 0, 8), 8, " ")." ";
+            echo str_pad(substr(trim($v['c']), 0, 8), 8, " ")." ";
+            echo date("M", $v["f1"]);
+            echo str_pad(date("j", $v["f1"]), 3, " ", STR_PAD_LEFT)." ".date("H:i", $v["f1"]);
+            echo "\n";
+        }
+    }
