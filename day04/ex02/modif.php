@@ -1,21 +1,26 @@
 <?php
-	if ($_POST['submit'] === "OK" && $_POST['login'] && $_POST['passwd']){
-		if (!file_exists("../private"))
-			mkdir("../private/", 0777);
-		if (!file_exists("../private"))
-			file_put_contents("../private/passwd", 0777);
-		else
-			$uns_file = unserialize("../private/passwd");
-		if (array_search($_POST['login'], $uns_file))
-			echo "ERROR\n";
-		else
+	if ($_POST['submit'] === "OK" && $_POST['login'] && $_POST['oldpw']  && $_POST['newpw'])
+	{
+		$uns_file = unserialize(file_get_contents("../private/passwd"));
+        if (!$uns_file)
+        {
+            echo "ERROR\n";
+            return 0;
+        }
+		foreach ($uns_file as $key => $value) 
 		{
-			$new['login'] = $_POST['login'];
-            $new['passwd'] = hash('whirlpool', $_POST['passwd']);
-            $uns_file[] = $new;
-            file_put_contents('../private/passwd', serialize($uns_file));
-            echo "OK\n";
-		}
+            if ($value['login'] === $_POST['login'] && $value['passwd'] === hash('whirlpool', $_POST['oldpw']))
+            {
+            	$uns_file[$key]['passwd']  = hash('whirlpool', $_POST['newpw']);
+            	file_put_contents('../private/passwd', serialize($uns_file));
+            	echo "OK\n";
+            	return 0;
+            }
+        }
+        echo "ERROR\n";
+        return 0;
+
+         
     }
     else
     	echo "ERROR\n";

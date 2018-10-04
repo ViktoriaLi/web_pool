@@ -1,7 +1,7 @@
 #!/usr/bin/php
 <?php
     date_default_timezone_set('Europe/Kiev');
-    $file = fopen("/var/run/utmpx", "r");
+    $file = fopen("/var/run/utmp", "r");
     while ($utmpx = fread($file, 628)){
         $unpack = unpack("a256a/a4b/a32c/id/ie/I2f/a256g/i16h", $utmpx);
         $array[$unpack['c']] = $unpack;
