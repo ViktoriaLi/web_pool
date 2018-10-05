@@ -5,7 +5,7 @@
 			return NULL;
 		$arr = str_word_count($to_spl, 1);
 		if (!count($arr))
-			return NULL;
+			return $tmp = array();
 		natsort($arr);
 		$new_arr = NULL;
 		$i = 0;

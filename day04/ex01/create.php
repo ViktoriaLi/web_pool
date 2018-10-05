@@ -2,7 +2,7 @@
 	if ($_POST['submit'] == "OK" && $_POST['login'] && $_POST['passwd'])
 	{
 		if (!file_exists("../private/"))
-			mkdir("../private/", 0744);
+			mkdir("../private/", 0777);
 		if (!file_exists("../private/passwd"))
 			file_put_contents("../private/passwd", NULL);
 		$uns_file = unserialize(file_get_contents("../private/passwd"));
@@ -11,7 +11,7 @@
 			 foreach ($uns_file as $key => $value) {
                 if ($value['login'] === $_POST['login'])
                 {
-                	echo "ERROR1\n";
+                	echo "ERROR\n";
                 	return 0;
                 }
             }
@@ -26,5 +26,5 @@
 		}
     }
     else
-    	echo "ERROR2\n";
+    	echo "ERROR\n";
 ?>

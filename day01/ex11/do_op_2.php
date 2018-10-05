@@ -3,7 +3,7 @@
 	if ($argc > 1)
 	{
 		$str = trim($argv[1]);
-		if (!strpbrk($str, '+-*/%') || ($str[0] < '0' && $str[0] > '9' && $str[0] != ' ') || 
+		if (!strpbrk($str, '+-*/%') || ($str[0] < '0' || $str[0] > '9' && $str[0] != '-') || 
 			(strpbrk($str, '+-*%/')[1] < '0' && strpbrk($str, '+-*%/')[1] > '9'
 				&& strpbrk($str, '+-*%/')[1] != ' '))
 		{
@@ -36,19 +36,20 @@
 
 		if (strrchr($str, '+'))
 		{
-			$first = substr($str, 0, strrchr($str, '+'));
+			$first = substr($str, 0, strpos($str, '+') + 1);
 			$first = trim($first);
-			$second = substr($str, strrchr($str, '+') + 1);
+			$second = substr($str, strpos($str, '+') + 1);
 			$second = trim($second);
 			echo $first + $second;
 			echo "\n";
 		}
 		if (strrchr($str, '-'))
 		{
-			$first = substr($str, 0, strrchr($str, '-'));
+			$first = substr($str, 0, strpos($str, '-') + 1);
 			$first = trim($first);
-			$second = substr($str, strrchr($str, '-') + 1);
+			$second = substr($str, strpos($str, '-') + 1);
 			$second = trim($second);
+
 			echo $first - $second;
 			echo "\n";
 		}
