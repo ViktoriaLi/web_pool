@@ -1,12 +1,6 @@
 <?php
 
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-ini_set('error_reporting', E_ALL);
-
-
-require_once 'db_rush00/connection.php';
-require_once 'php_rsc/register.php';
+//require_once '../db_rush00/connection.php';
 require_once 'php_rsc/add_products.php';
 
 $db = mysqli_connect($host, $user, $password);
@@ -18,12 +12,13 @@ if (!$myrow) {
 		mysqli_query($db,"CREATE DATABASE IF NOT EXISTS $database");
 		mysqli_query($db,"USE $database");
 		$sql = "CREATE TABLE IF NOT EXISTS users (
-			id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
+			id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 			login VARCHAR(30) NOT NULL,
 			password VARCHAR(30) NOT NULL,
 			status INT(1) NOT NULL
 			)";
 		mysqli_query($db, $sql);
+		mysqli_query($db, "INSERT INTO users VALUES (NULL, 'admin', 'admin', '2')");
 		$sql = "CREATE TABLE IF NOT EXISTS products (
 			id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
 			prod_name VARCHAR(30) NOT NULL,
@@ -34,18 +29,9 @@ if (!$myrow) {
 			)";
 		mysqli_query($db, $sql);
 		add_products($db);
-		require_once 'php_rsc/register.php';
 	}
 	else
 		echo 'ERROR conect mySQL';
 }
-else
-	echo 'end';
 
-
-
-//$login = 'asdqd';
-//$pass = '123';
-//
-//register($db, $login, $pass);
 ?>

@@ -9,6 +9,11 @@ nav {
     display : block;
 }
 
+.pr_text a {
+    text-decoration: none;
+    color: white;
+}
+
 ul {
     margin: 0;
     padding: 0;
@@ -28,16 +33,18 @@ ul li {
 }
 
 a {
+    color: white;
     text-decoration: none;
 }
 
 .title {
-    margin-left: 300px;
-    width: 960px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 1060px;
 }
 
 .title h1{
-    margin-left: 200px;
+    margin-left: 25%;
 
 }
 
@@ -54,7 +61,7 @@ a {
 
 .nav li {
     float: left;
-    width: 100px;
+    width: 10%;
 }
 
 .nav a {
@@ -72,6 +79,7 @@ a {
 .auth {
     padding: 25px 0;
     float: right;
+    color: white;
 }
 
 .login input[type="text"],
@@ -86,6 +94,7 @@ a {
     padding: 5px 15px;
     margin-right: 5px;
     border: 1px solid yellow;
+    float: right;
 }
 
 .products {
@@ -95,7 +104,7 @@ a {
 .category_title {
     padding-bottom: 15px;
     font-size: 36px;
-    padding-left: 225px;
+    padding-left: 20%;
     color: white;
 }
 
@@ -120,14 +129,26 @@ a {
 
 .pr_item {
     width: 100%;
+        color: white;
 }
 
 .pr_text {
     padding: 0 5px 5px 20px;
     outline: none;
+    color: white;
 }
 
 .copyright {
     text-align: right;
     color: white;
+}
+
+.adm_buttons {
+    box-sizing: border-box;
+    padding-left: 30%;
+}
+
+.basket {
+    color: white;
+    font-size: 36px;
 }

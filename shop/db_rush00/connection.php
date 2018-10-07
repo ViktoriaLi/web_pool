@@ -6,7 +6,6 @@ ini_set('error_reporting', E_ALL);
 
 function conect() {
 	$host = 'localhost';
-//	$host = '127.0.0.1';
 	$database = 'bd_rush00';
 	$user = 'root';
 	$password = '20081991';
