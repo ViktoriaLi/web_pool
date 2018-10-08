@@ -1,4 +1,4 @@
 SELECT title, summary
 FROM film 
-WHERE summary like '%Vincent%' COLLATE UTF8_GENERAL_CI
+WHERE summary like '%Vincent%'
 ORDER BY id_film ASC;
