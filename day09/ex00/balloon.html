@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+	<head>
+		<title>Javascript</title>
+		<script type="text/javascript">
+
+        function clickDiv() {
+            var div = document.getElementById('baloon');
+            var h = parseInt(div.style.height);
+            var w = parseInt(div.style.width);
+            var r = parseInt(div.style.borderRadius);
+            var color = div.style.backgroundColor;
+            if (color == "red")
+            	div.style.backgroundColor = "green";
+            if (color == "green")
+            	div.style.backgroundColor = "blue";
+            if (color == "blue")
+            	div.style.backgroundColor = "red";
+            if (h <= 410)
+            {
+           		div.style.height = h + 10 + "px";
+           		div.style.width = w + 10 + "px";
+           		div.style.borderRadius = r + 5 + "px";
+            }
+            else
+            {
+            	div.style.height = 200 + "px";
+           		div.style.width = 200 + "px";
+           		div.style.borderRadius = 100 + "px";
+            }
+           
+        }
+
+        function mouseOutDiv()
+        {
+        	var div = document.getElementById('baloon');
+            var h = parseInt(div.style.height);
+            var w = parseInt(div.style.width);
+            var r = parseInt(div.style.borderRadius);
+            var color = div.style.backgroundColor;
+            if (color == "red")
+            	div.style.backgroundColor = "blue";
+            if (color == "green")
+            	div.style.backgroundColor = "red";
+            if (color == "blue")
+            	div.style.backgroundColor = "green";
+            if (h >= 205)
+            {
+           		div.style.height = h - 5 + "px";
+           		div.style.width = w - 5 + "px";
+           		div.style.borderRadius = r - 2,5 + "px";
+            }
+        }
+      </script>
+	</head>
+	<body>
+		<div id="baloon" style="width:200px;height:200px;background-color:red;border-radius:100px" onclick="clickDiv();" onmouseout="mouseOutDiv();"></div>
+		
+	</body>
+</html>
