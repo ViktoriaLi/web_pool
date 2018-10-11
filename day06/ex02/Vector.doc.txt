@@ -1,0 +1,40 @@
+<- Vector ----------------------------------------------------------------------
+The Vector class represents a methods for operations with vectors.
+
+For Vector instance creating you need dest Vector mandatory and optional orig Vector.
+
+An instance can be contructed with 2 orig and dest vectors:
+new Vector( array( 'orig' => $vtxO, 'dest' => $vtxX ) );
+
+Vertex.class.php need be included.
+
+The class provides the following methods :
+
+float magnitude();
+Returns the vector’s length (or "norm").
+
+Vector normalize();
+Returns a normalized version of the vector. If the vector is
+already normalized, returns a fresh copy of the vector.
+
+Vector add( Vector $rhs );
+Returns the sum vector of both vectors.
+
+Vector sub( Vector $rhs );
+Returns the difference vector of both vectors.
+
+Vector opposite();
+Returns the opposite vector.
+
+Vector scalarProduct( $k );
+Returns the multiplication of the vector with a scalar.
+
+float dotProduct( Vector $rhs );
+Returns the scalar multiplication of both vec- tors.
+
+float cos( Vector $rhs );
+Returns the angle’sAppendix cosine between both vec- tors.
+
+Vector crossProduct( Vector $rhs );
+Returns the cross multiplication of both vectors (right-hand mark!)
+---------------------------------------------------------------------- Vector ->
