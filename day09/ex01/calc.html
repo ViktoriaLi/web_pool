@@ -6,18 +6,20 @@
 
         function needCalc() {
             var first = parseInt(document.forms["calcForm"]["firstValue"].value);
+            var firstCheck = parseFloat(document.forms["calcForm"]["firstValue"].value);
             var second = parseInt(document.forms["calcForm"]["secondValue"].value);
+             var secondCheck = parseFloat(document.forms["calcForm"]["secondValue"].value);
             var select = document.getElementById("op");
             var operator = select.options[select.selectedIndex].text;
-            if (first < 0 || second < 0 || !first || !second )
+            if (first < 0 || second < 0 || isNaN(first) || isNaN(second) || first != firstCheck || second != secondCheck)
             {
                 console.log('Error :(');
                 alert('Error :(');
             }
             else if (second == 0 && (operator == '%' || operator == '/'))
             {
-                console.log('It’s over 9000!');
-                alert('It’s over 9000!');
+                console.log("It's over 9000!");
+                alert("It's over 9000!");
             }
             else
             {
@@ -45,12 +47,19 @@
                 }
             }          
         }
+
+        function timeAlert()
+        {
+            alert('Please, use me...');
+        }
+
+        setTimeout(timeAlert, 30000);
       </script>
 	</head>
 	<body>
 		<form name="calcForm">
             First value:<br>
-            <input type="text" name="firstValue"><br>
+            <input type="number" name="firstValue"><br>
             <select id="op">
                 <option value="plus" name="plus">+</option>
                 <option value="substr" name="substr">-</option>
@@ -59,7 +68,7 @@
                 <option value="modulo" name="modulo">%</option>
             </select><br>
             Second value:<br>
-            <input type="text" name="secondValue"><br>
+            <input type="number" name="secondValue"><br>
             <input type="submit" name="calc" value="Try me!" onclick="needCalc();"><br>
         </form>
 		
